@@ -40,7 +40,7 @@ class GameObject(object):  # TODO: Add tests
         console.draw_char(self.x, self.y, ' ', self.color, bg=None)
 
 
-class Tile(object):
+class Tile(object):  # TODO: Add tests
     """Map tiles and their properties.
 
     """
@@ -53,13 +53,13 @@ class Tile(object):
         self.block_sight = block_sight
 
 
-def make_map():
+def make_map():  # TODO: Add tests
     """Create the game map.
 
     """
     global game_map
 
-    # Populate the map with unblocked tiles
+    # Populate the map with unblocked tiles.
     game_map = [[Tile(False) for y in range(MAP_HEIGHT)] for x in range(MAP_WIDTH)]
 
     # For testing purposes:
@@ -69,7 +69,7 @@ def make_map():
     game_map[50][22].block_sight = True
 
 
-def render_all():
+def render_all():  # TODO: Add tests
     """Draws all game objects and the game map to screen.
 
     """
@@ -128,19 +128,19 @@ def handle_keys(realtime):  # TODO: Add tests
     elif user_input.key == 'RIGHT':
         player.move(1, 0)
 
-# Game initialization
+# Game initialization.
 
-# Window size
+# Window size.
 SCREEN_WIDTH = 80
 SCREEN_HEIGHT = 50
 
-# Map size and attributes
+# Map size and attributes.
 MAP_WIDTH = 80
 MAP_HEIGHT = 45
 color_dark_wall = (0, 0, 100)
 color_dark_ground = (50, 50, 150)
 
-# Real-time or turn based
+# Real-time or turn based.
 REALTIME = False
 LIMIT_FPS = 20
 
@@ -154,7 +154,7 @@ player = GameObject(SCREEN_WIDTH//2, SCREEN_HEIGHT//2, '@', (255, 255, 255))
 npc = GameObject(SCREEN_WIDTH//2 - 5, SCREEN_HEIGHT//2, '@', (255, 255, 0))
 objects = [npc, player]
 
-# Generate the game map
+# Generate the game map.
 make_map()
 
 # Main loop
