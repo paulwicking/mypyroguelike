@@ -1,0 +1,12 @@
+""" Spork: Re-imagined
+
+A rogue-like adventure in Python.
+
+"""
+
+
+def main():
+    print('Hello World!')
+
+if __name__ == '__main__':
+    main()
